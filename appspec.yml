@@ -22,15 +22,12 @@ os: windows
 # If you are not copying any files to the instance, then remove the
 #   "files" section altogether. A blank or incomplete "files" section
 #   may cause associated deployments to fail.
-files:
-  - source: \
-    destination: c:\deploy\ng
 
-#hooks:
+hooks:
 #  BeforeInstall:
 #    - location: Scripts/beforeInstall.cmd
-#  AfterInstall:
-#    - location: Scripts/afterInstall.cmd
+  AfterInstall:
+    - location: test.ps1
 #      timeout: 180
 #  ApplicationStart:
 #    - location: Scripts/applicationStart.cmd
